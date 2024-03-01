@@ -1,0 +1,69 @@
+JFDML JFormDesigner: "8.1.1.0.298" Java: "17.0.9" encoding: "UTF-8"
+
+new FormModel {
+	contentType: "form/swing"
+	root: new FormRoot {
+		add( new FormWindow( "javax.swing.JDialog", new FormLayoutManager( class net.miginfocom.swing.MigLayout ) {
+			"$layoutConstraints": "fillx,hidemode 3"
+			"$columnConstraints": "[fill][grow]"
+			"$rowConstraints": "[][][][]"
+		} ) {
+			name: "this"
+			"preferredSize": new java.awt.Dimension( 320, 180 )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "label1"
+				"text": "name"
+			}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+				"value": "cell 0 0"
+			} )
+			add( new FormComponent( "javax.swing.JTextField" ) {
+				name: "name"
+				auxiliary() {
+					"JavaCodeGenerator.variableModifiers": 4
+				}
+			}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+				"value": "cell 1 0,growx"
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "label2"
+				"text": "db:"
+			}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+				"value": "cell 0 1"
+			} )
+			add( new FormComponent( "javax.swing.JTextField" ) {
+				name: "db"
+				auxiliary() {
+					"JavaCodeGenerator.variableModifiers": 4
+				}
+			}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+				"value": "cell 1 1,growx"
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "label3"
+				"text": "DataType:"
+			}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+				"value": "cell 0 2"
+			} )
+			add( new FormComponent( "javax.swing.JComboBox" ) {
+				name: "dataType"
+				auxiliary() {
+					"JavaCodeGenerator.variableModifiers": 4
+				}
+			}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+				"value": "cell 1 2,growx"
+			} )
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "submit"
+				"text": "Submit"
+				auxiliary() {
+					"JavaCodeGenerator.variableModifiers": 4
+				}
+			}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+				"value": "cell 0 3 2 1,alignx center,growx 0"
+			} )
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 0, 0 )
+			"size": new java.awt.Dimension( 400, 300 )
+		} )
+	}
+}

@@ -1,0 +1,24 @@
+plugins {
+    id 'org.jetbrains.kotlin.jvm'
+}
+
+group = 'cn.yycampus.plc'
+version = '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'cn.hutool:hutool-all:5.8.21'
+    implementation 'com.miglayout:miglayout:3.7.4'
+    implementation 'com.github.s7connector:s7connector:2.1'
+    testImplementation 'org.jetbrains.kotlin:kotlin-test'
+}
+
+test {
+    useJUnitPlatform()
+}
+kotlin {
+    jvmToolchain(17)
+}

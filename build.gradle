@@ -2,20 +2,49 @@ plugins {
     id 'org.jetbrains.kotlin.jvm' version '1.9.21'
 }
 
-group = 'org.example'
+group = 'cn.yycampus'
 version = '1.0-SNAPSHOT'
 
 repositories {
+    mavenLocal()
+    maven { url 'https://repo1.maven.org/maven2/' }
+    maven { url 'https://maven.aliyun.com/repository/central' }
+    maven { url 'https://maven.aliyun.com/repository/public' }
+    maven { url 'https://maven.aliyun.com/repository/gradle-plugin' }
+    maven { url 'https://clojars.org/repo/' }
+    maven { url 'https://dist.wso2.org/maven2/' }
+    maven { url 'https://www.jetbrains.com/intellij-repository/releases/' }
     mavenCentral()
 }
 
+project("plc-catch"){
+
+}
+
 dependencies {
+    implementation project("plc-catch")
+    implementation 'com.formdev:flatlaf:3.2.1'
+    implementation 'com.formdev:flatlaf-intellij-themes:3.2.1'
+
+    implementation 'com.github.s7connector:s7connector:2.1'
+    implementation 'org.jfree:jfreechart:1.5.4'
+
+    implementation 'com.miglayout:miglayout:3.7.4'
+    implementation 'cn.hutool:hutool-all:5.8.21'
+
+    implementation 'io.github.andrewauclair:modern-docking-api:0.9.2'
+
+    implementation 'io.github.andrewauclair:modern-docking-ui:0.9.2'
+    implementation 'io.github.andrewauclair:modern-docking-single-app:0.9.2'
+
     testImplementation 'org.jetbrains.kotlin:kotlin-test'
 }
+
+
 
 test {
     useJUnitPlatform()
 }
 kotlin {
-    jvmToolchain(8)
+    jvmToolchain(17)
 }
