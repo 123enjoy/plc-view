@@ -4,9 +4,12 @@ This is a plc device view,You can use this project to understand the point data 
 
 ## Build and Run
 Java Version: 17
-> git clone https://github.com/123enjoy/plc-view.git
-> .\gradlew jar </br>
-> java -jar build/libs/plc-view.jar
+```shell
+git clone https://github.com/123enjoy/plc-view.git
+.\gradlew jar
+java -jar build/libs/plc-view.jar
+```
+
 
 
 ## Use
